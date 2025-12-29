@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jars">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/sample4060-sample.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/sample4060-recordMotion.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/sample4060-motorstateslive.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/sample4060-sotaTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/sample4060-camerasnaptest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
