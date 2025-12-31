@@ -1,6 +1,6 @@
 import time
 import random
-from epuck import EPuckCom, EPuckIP   #makesure you have pyserial installed
+from epuck import EPuckCom, EPuckIP, epuck   #makesure you have pyserial installed
 
 import numpy as np
 from PIL import Image
@@ -41,9 +41,9 @@ def epuck_test():
     epuckcomm.get_camera_parameters()
     print(epuckcomm.state.cam_framebytes)
 
-    #epuckcomm.act_speaker_sound = epuck.SOUND_STARWARS
-    # epuckcomm.send_command()
-    # time.sleep(5)
+    epuckcomm.state.act_speaker_sound = epuck.SOUND_STARWARS
+    epuckcomm.send_command()
+    time.sleep(5)
 
     for i in range(100):
         epuckcomm.state.act_binary_led_states[random.randint(0,epuck.BINARY_LED_COUNT-1)] = random.randint(0,1)
