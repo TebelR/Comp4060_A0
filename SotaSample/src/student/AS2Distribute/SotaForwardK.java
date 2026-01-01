@@ -7,14 +7,12 @@ import student.AS2Distribute.Frames.FrameKeys;
 
 public class SotaForwardK {
 
+    // stores the final FK matrix for each frame type
     public final Map<FrameKeys, RealMatrix> frames = new HashMap<>();
-
-    public RealVector endEffectorState = null; // a single vector representing the combined state of the end effector. needs to be in the same order as in the IK
 
     public SotaForwardK(double[] angles) { this(MatrixUtils.createRealVector(angles)); }
     public SotaForwardK(RealVector angles) {
         // TODO
-        // constructs all the frame matrices and stores them in a Map that maps
-        //  a frame type (FrameKey) to the frame matrix.
+        // constructs all the frame matrices and stores them in the frames Map
     }
 }

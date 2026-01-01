@@ -51,7 +51,7 @@ public class AS2_4 {
 
 			double dist = MatrixHelp.getTrans(FK.frames.get(FrameKeys.L_HAND))
 					      .getDistance(MatrixHelp.getTrans(FK.frames.get(FrameKeys.R_HAND)));
-			System.out.println("Distance between hands: "+dist*100);
+			System.out.println("Distance between hands: "+dist*100); // in cm
 			
 			System.out.flush();
 			CRobotUtil.wait(100);

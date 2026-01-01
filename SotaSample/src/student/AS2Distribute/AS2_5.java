@@ -50,6 +50,8 @@ public class AS2_5 {
 		double h_angle = 0; // head angle.
 		double h_speed = 0.05;
 
+		final int MAX_IK_TRIES = 20; // how many iterations to try before giving up
+
 		switch (this.TEST_MODE) {
 			case EASY:
 				RADIUS = .015; // mm
@@ -100,10 +102,10 @@ public class AS2_5 {
 			double[] head = 	new double[]{headCenter[0]	+ Math.sin(h_angle), headCenter[1]+(h_angle*3)%1.5, headCenter[2]+Math.sin(h_angle)};
 
 			// do IK to solve for motor positions, do incrementally
-			RealVector theta = SotaInverseK.solve(FrameKeys.L_HAND, JType.O, MatrixUtils.createRealVector(left), currentAngles); 
-			theta = SotaInverseK.solve(FrameKeys.R_HAND, JType.O, MatrixUtils.createRealVector(right), theta);
+			RealVector theta = SotaInverseK.solve(FrameKeys.L_HAND, JType.O, MatrixUtils.createRealVector(left), currentAngles, MAX_IK_TRIES);
+			theta = SotaInverseK.solve(FrameKeys.R_HAND, JType.O, MatrixUtils.createRealVector(right), theta, MAX_IK_TRIES);
 			if (this.TEST_MODE == TestMode.EXTREME)
-				theta = SotaInverseK.solve(FrameKeys.HEAD, JType.R, MatrixUtils.createRealVector(head), theta); ; 
+				theta = SotaInverseK.solve(FrameKeys.HEAD, JType.R, MatrixUtils.createRealVector(head), theta, MAX_IK_TRIES); ;
 			
 			pose = ranges.calcMotorValues(theta);
 			
