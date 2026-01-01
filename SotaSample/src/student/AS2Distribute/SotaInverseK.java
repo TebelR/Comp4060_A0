@@ -3,7 +3,7 @@ package student.AS2Distribute;
 import java.util.TreeMap;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
-import AS3.Frames.FrameKeys;
+import student.AS2Distribute.Frames.FrameKeys;
 
 public class SotaInverseK {
 

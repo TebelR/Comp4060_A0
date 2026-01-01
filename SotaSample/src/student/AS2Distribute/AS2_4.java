@@ -1,6 +1,6 @@
 package student.AS2Distribute;
 
-import AS3.Frames.FrameKeys;
+import student.AS2Distribute.Frames.FrameKeys;
 import jp.vstone.RobotLib.*;
 
 public class AS2_4 {

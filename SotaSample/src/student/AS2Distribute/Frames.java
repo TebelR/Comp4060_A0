@@ -2,7 +2,7 @@ package student.AS2Distribute;
 
 public class Frames {
 
-    enum FrameKeys{  
+    public enum FrameKeys{
         L_HAND(),
         R_HAND(),
         HEAD(); 

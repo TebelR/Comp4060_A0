@@ -4,8 +4,8 @@ import java.util.Arrays;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealVector;
 
-import AS3.Frames.FrameKeys;
-import AS3.SotaInverseK.JType;
+import student.AS2Distribute.Frames.FrameKeys;
+import student.AS2Distribute.SotaInverseK.JType;
 import jp.vstone.RobotLib.*;
 
 public class AS2_5 {
